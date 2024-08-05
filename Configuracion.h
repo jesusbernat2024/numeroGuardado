@@ -1,7 +1,5 @@
 class Configuracion{
     public:
         int getDato();
+        void setDato(int x);
 };
-
-int getDato();
-void setDato(int x);

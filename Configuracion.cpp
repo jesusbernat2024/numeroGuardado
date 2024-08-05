@@ -1,27 +1,21 @@
 #include <iostream>
 #include <fstream>
+#include "Configuracion.h"
 using namespace std;
 
-class Configuracion{
-    public:
-        int getDato(){
-            int a;
-            ifstream ficheroEntrada("dato.dat");
-            ficheroEntrada >> a;
-            ficheroEntrada.close();
-            return a;
-        }
-};
-
-int getDato(){
+int Configuracion::getDato(){
     int a;
     ifstream ficheroEntrada("dato.dat");
     ficheroEntrada >> a;
     ficheroEntrada.close();
     return a;
 }
-void setDato(int x){
+
+void Configuracion::setDato(int x){
     ofstream ficheroSalida("dato.dat");
     ficheroSalida << x;
     ficheroSalida.close();
 }
+
+
+
