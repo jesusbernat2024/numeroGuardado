@@ -1,0 +1,13 @@
+​class Configuracion
+
+- valorX
+- valorY
+- valorZ
+
+- getValorX()
+- setValorX()
+- ...
+
+- cargarFichero()
+- guardarFichero()
+

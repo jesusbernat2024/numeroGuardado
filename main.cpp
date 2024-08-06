@@ -3,16 +3,18 @@
 using namespace std;
 
 int main() {
+    Configuracion conf;
     int x;
-    Configuracion y;
+
+    conf.cargarFichero();
     
-    x = y.getDato();
-    
-    cout << "Tu número es el " + to_string(x) + ". ¿Quieres cambiarlo?\n";
+    cout << "Tu número es el " + to_string(conf.getValorX()) + ". ¿Quieres cambiarlo?\n";
     cout << "Introduce nuevo número: ";
     cin >> x;
+    conf.setValorX(x);
 
-    y.setDato(x);
+
+    conf.guardarFichero();
     
     return 0;
 }
